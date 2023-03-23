@@ -2,14 +2,15 @@
 
 int main()
 {
-    // Arrays should be the same datatypes
-    std::string cars[] = {"Corvette", "Mustang", "Camry"};
-    // or you can declare first by its size
-    // std::cout << cars[3];
+    double prices[4];
 
-    cars[0] = "Ford";
+    prices[0] = 5.00;
+    prices[1] = 7.50;
+    prices[2] = 9.99;
+    prices[3] = 15.00;
 
-    std::cout << cars[0] << '\n';
-    std::cout << cars[1] << '\n';
-    std::cout << cars[2] << '\n';
+    std::cout << prices[0] << '\n';
+    std::cout << prices[1] << '\n';
+    std::cout << prices[2] << '\n';
+    std::cout << prices[3] << '\n';
 }
