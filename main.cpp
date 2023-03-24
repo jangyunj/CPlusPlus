@@ -2,15 +2,15 @@
 
 int main()
 {
-    double gpa = 2.5;
-    char grade = 'C';
-    bool student = true;
-    char grades[] = {'A', 'B', 'C', 'D', 'F'};
-    std::string students[] = {"Spongebob", " Patrick", "Sandy"};
+    std::string students[] = {"Spongebob", "Patrick", "Sandy", "Squidward"};
+    for (int i = 0; i < sizeof(students) / sizeof(std::string); i++)
+    {
+        std::cout << students[i] << '\n';
+    }
 
-    std::cout << sizeof(gpa) << " bytes\n"; // Size of double (datatype) allocated to my gpa variable
-    std::cout << sizeof(grade) << " bytes\n";
-    std::cout << sizeof(student);
-    std::cout << sizeof(grades);
-    std::cout << sizeof(students) / sizeof(std::string) << " elements";
+    char grades[] = {'A', 'B', 'C', 'D', 'F'};
+    for (int i = 0; i < sizeof(grades) / sizeof(char); i++)
+    {
+        std::cout << grades[i] << '\n';
+    }
 }
