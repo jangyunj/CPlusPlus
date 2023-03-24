@@ -2,15 +2,22 @@
 
 int main()
 {
+    // Foreach loop - Goes through the entire loop until the end
     std::string students[] = {"Spongebob", "Patrick", "Sandy", "Squidward"};
-    for (int i = 0; i < sizeof(students) / sizeof(std::string); i++)
+    for (std::string student : students)
     {
-        std::cout << students[i] << '\n';
+        std::cout << student << '\n';
     }
 
-    char grades[] = {'A', 'B', 'C', 'D', 'F'};
-    for (int i = 0; i < sizeof(grades) / sizeof(char); i++)
+    int numbers[] = {1, 2, 3, 4, 5};
+    for (int number : numbers)
     {
-        std::cout << grades[i] << '\n';
+        std::cout << number << '\n';
+    }
+
+    int grades[] = {90, 85, 100, 75, 100};
+    for (int grade : grades)
+    {
+        std::cout << grade << '\n';
     }
 }
