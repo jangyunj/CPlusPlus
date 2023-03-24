@@ -1,23 +1,23 @@
 #include <iostream>
 
+double getTotal(double prices[], int size);
+
 int main()
 {
-    // Foreach loop - Goes through the entire loop until the end
-    std::string students[] = {"Spongebob", "Patrick", "Sandy", "Squidward"};
-    for (std::string student : students)
-    {
-        std::cout << student << '\n';
-    }
+    double prices[] = {49.99, 15.05, 75, 9.99};
+    int size = sizeof(prices) / sizeof(prices[0]); // explicitly calculate the size of the array
+    double total = getTotal(prices, size);
 
-    int numbers[] = {1, 2, 3, 4, 5};
-    for (int number : numbers)
-    {
-        std::cout << number << '\n';
-    }
+    std::cout << "$" << total;
+}
 
-    int grades[] = {90, 85, 100, 75, 100};
-    for (int grade : grades)
+double getTotal(double prices[], int size) // when iterating over an array, you need second var that informs the size of an array
+{
+    double total = 0; // local variable - it can be same name as long as it's in a different function
+
+    for (int i = 0; i < size; i++)
     {
-        std::cout << grade << '\n';
+        total += prices[i];
     }
+    return total;
 }
