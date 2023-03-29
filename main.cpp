@@ -1,35 +1,13 @@
 #include <iostream>
-int searchArray(int numbers[], int size, int myNum);
 
 int main()
 {
-    int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int size = sizeof(numbers) / sizeof(int);
-    int index;
-    int myNum;
+    std::string foods[100];
 
-    std::cout << "Enter element to search: " << '\n';
-    std::cin >> myNum;
+    fill(foods, foods + 100, "pizza");
 
-    index = searchArray(numbers, size, myNum);
-    if (index != -1)
+    for (std::string food : foods)
     {
-        std::cout << myNum << " is at index " << index;
+        std::cout << food << '\n';
     }
-    else
-    {
-        std::cout << myNum << " is not in the array";
-    }
-}
-
-int searchArray(int numbers[], int size, int myNum)
-{
-    for (int i = 0; i < size; i++)
-    {
-        if (numbers[i] == myNum)
-        {
-            return i;
-        }
-    }
-    return -1;
 }
