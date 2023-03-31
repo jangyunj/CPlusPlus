@@ -2,7 +2,7 @@
 
 int main()
 {
-    //---FILL 1/4 WITH 1, 2, 3, 4 (INTEGERS)--------------------
+    //-----------------FILL 1/4 WITH 1, 2, 3, 4 WITH INTEGERS--------------------
     const int size = 100;
     int numbers[size];
 
@@ -16,7 +16,6 @@ int main()
         std::cout << number << '\n';
     }
 }
-
 
 // {
 //     //---FILL 1/3 WITH PIZZA, BURGER, HOTDOG-------------------
