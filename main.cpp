@@ -1,22 +1,25 @@
 #include <iostream>
 
-void swap(std::string &x, std::string &y);
+void swap(int &a, int &b);
 
 int main()
 {
-    std::string x = "Kool-aid";
-    std::string y = "Water";
+    int a = 90;
+    int b = 21;
+    int temp;
 
-    swap(x, y);
+    swap(a, b);
 
-    std::cout << "X: " << x << '\n';
-    std::cout << "Y: " << y << '\n';
+    std::cout << a << '\n';
+    std::cout << b << '\n';
 }
 
-void swap(std::string &x, std::string &y)
+// when you invoke this function, you are creating copies of the original values
+// so you need to switch the original values - so pass by REFERENCE (memory address)
+void swap(int &a, int &b)
 {
-    std::string temp;
-    temp = x;
-    x = y;
-    y = temp;
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
 }
