@@ -1,25 +1,21 @@
 #include <iostream>
 
-void swap(int &a, int &b);
+// const parameter - makes read-only code; more secure and conveys intent
+// useful for references and pointers
+
+void printInfo(const std::string &name, const int &age);
 
 int main()
 {
-    int a = 90;
-    int b = 21;
-    int temp;
+    std::string name = "Bro";
+    int age = 21;
 
-    swap(a, b);
-
-    std::cout << a << '\n';
-    std::cout << b << '\n';
+    printInfo(name, age);
 }
 
-// when you invoke this function, you are creating copies of the original values
-// so you need to switch the original values - so pass by REFERENCE (memory address)
-void swap(int &a, int &b)
+void printInfo(const std::string &name, const int &age)
 {
-    int temp;
-    temp = a;
-    a = b;
-    b = temp;
+
+    std::cout << name << '\n';
+    std::cout << age << '\n';
 }
