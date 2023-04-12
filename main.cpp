@@ -1,21 +1,17 @@
 #include <iostream>
 
-// const parameter - makes read-only code; more secure and conveys intent
-// useful for references and pointers
-
-void printInfo(const std::string &name, const int &age);
-
 int main()
 {
+    // POINTERS
+    //& address-of operator
+    //* dereference operator
+
     std::string name = "Bro";
-    int age = 21;
+    std::string *pName = &name;
 
-    printInfo(name, age);
-}
+    std::cout << *pName << ' '; // to access the VALUE at this memory location, use *
 
-void printInfo(const std::string &name, const int &age)
-{
-
-    std::cout << name << '\n';
-    std::cout << age << '\n';
+    int age = 11;
+    int *pAge = &age;
+    std::cout << *pAge << ' ';
 }
