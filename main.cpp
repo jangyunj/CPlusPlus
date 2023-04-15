@@ -2,17 +2,21 @@
 
 int main()
 {
-    // Pointers: a variable that stores a memory address of another variable
+    // Nullptr = keyword that represents a null pointer literal
+    // Nullptr : helpful when determining if an address was successfully assigned to a pointer
 
-    //     std::string food = "pizza";
-    //     // std::cout << food;  //outputs the "value" of food variable
-    //     // std::cout << &food; //outputs the MEMORY ADDRESS of food variable
+    int *pointer = nullptr;
+    int x = 123;
 
-    //     std::string *pFood = &food;
-    //     std::cout << *pFood; // use the dereference operator to access the VALUE at this address
+    pointer = &x;
 
-    std::string freePizzas[5] = {"pizza1", "pizza2", "pizza3", "pizza4", "pizza5"};
-    std::string *pFreePizzas = freePizzas; // Array already gives the ADDRESS
-
-    std::cout << *pFreePizzas; // outputs FIRST element in the array
+    if (pointer == nullptr)
+    {
+        std::cout << "address was not assigned\n";
+    }
+    else
+    {
+        std::cout << "address was assigned\n";
+        std::cout << *pointer;
+    }
 }
