@@ -2,16 +2,10 @@
 
 int main()
 {
-    // POINTERS
-    //& address-of operator
-    //* dereference operator
+    std::string food = "pizza";
+    // std::cout << food;  //outputs the "value" of food variable
+    // std::cout << &food; //outputs the MEMORY ADDRESS of food variable
 
-    std::string name = "Bro";
-    std::string *pName = &name;
-
-    std::cout << *pName << ' '; // to access the VALUE at this memory location, use *
-
-    int age = 11;
-    int *pAge = &age;
-    std::cout << *pAge << ' ';
+    std::string *pFood = &food;
+    std::cout << *pFood; // use the dereference operator to access the VALUE at this address
 }
