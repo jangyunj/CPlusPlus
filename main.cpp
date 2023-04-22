@@ -1,17 +1,26 @@
-/*dynamic memory - memory that is allocated after the program is already compiled and running
-                 - use 'new' operator to allocate memory in the HEAP
-                 - useful when we don't know how much memory we'll need; more flexible */
-
 #include <iostream>
+
+void walk(int steps);
 
 int main()
 {
-    int *pNum = NULL;
-    pNum = new int;
-    *pNum = 21;
-    std::cout << "address: " << pNum << '\n';
-    std::cout << "value: " << *pNum << '\n';
+    walk(100);
+}
 
-    delete pNum; // freeing up the memory at this location; otherwise, it may cause memory leak
-                 //  when using 'new' operator, try to use 'delete' operator too
+// void walk(int steps)
+// {
+//     for (int i = 0; i < steps; i++)    //Iterative approach
+//     {
+//         std::cout << "You take a step";
+//     }
+// }
+
+void walk(int steps)
+{
+    if (steps > 0)
+    {
+        std::cout << "You take a step\n";
+        walk(steps - 1); // Recursive - invoke the function WITHIN itself
+                         //           - uses more memory and takes longer to process
+    }
 }
