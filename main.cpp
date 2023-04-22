@@ -1,26 +1,28 @@
 #include <iostream>
 
-void walk(int steps);
+int factorial(int num);
 
 int main()
 {
-    walk(100);
+    std::cout << factorial(10);
 }
 
-// void walk(int steps)
-// {
-//     for (int i = 0; i < steps; i++)    //Iterative approach
-//     {
-//         std::cout << "You take a step";
-//     }
-// }
-
-void walk(int steps)
+int factorial(int num)
 {
-    if (steps > 0)
+    // int result = 1;                 //Iterative approach
+    // for (int i = 1; i <= num; i++)
+    // {
+    //     result *= i;
+    // }
+    // return result;
+
+    if (num > 1)
     {
-        std::cout << "You take a step\n";
-        walk(steps - 1); // Recursive - invoke the function WITHIN itself
-                         //           - uses more memory and takes longer to process
+        return num * factorial(num - 1); // Recursion approach - function inside of a function
+                                         //                    - invokes itself
+    }
+    else
+    {
+        return 1;
     }
 }
